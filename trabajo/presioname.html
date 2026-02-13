@@ -1,29 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presioname</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Presióname 💌</title>
+
+    <style>
+        body{
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+
+        main{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .presioname-container{
+            width: 90%;
+            max-width: 350px;
+            text-align: center;
+            position: relative;
+        }
+
+        .btn-abrir{
+            margin-top: 20px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: #ff4d6d;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-abrir:active{
+            transform: scale(0.95);
+        }
+
+        .carta{
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            display: none;
+        }
+
+        .carta p{
+            margin: 10px 0;
+        }
+
+        /* Para pantallas más grandes */
+        @media (min-width: 768px){
+            .presioname-container{
+                max-width: 500px;
+            }
+
+            .carta{
+                font-size: 1.05rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <main>
+
+<main>
     <div class="presioname-container">
-        <div class="presioname"></div>
-        <div class="contenido"></div>
-        <button class="btn-abrir">💌abrir y cerrar💌</button>
-        <div class="carta">
-            <p><b>💖Tengo algo que decirte💖</b></p>
-            <p><b>Gracias por estar en mi vida , quiero que sigamos juntos
-                y que seamos felices, aprendiendo , mejorando y 
-                creciendo juntos, se que las cosas serán dificiles, pero quiero que sepas que siempre 
-                estare a tu lado, sean en las buenas y en las malas 💖💖💖 , no nos presipitemos 
-                porque encontraremos la manera de poder superar cada obstaculo, que se 
-                nos presenten en el camino y que te quiero con todo mi corazón de poshito💖</b>
+
+        <button class="btn-abrir">💌 Abrir / Cerrar 💌</button>
+
+        <div class="carta" id="carta">
+            <p><b>💖 Tengo algo que decirte 💖</b></p>
+            <p>
+                <b>
+                Gracias por estar en mi vida.  
+                Quiero que sigamos juntos y que seamos felices, aprendiendo,
+                mejorando y creciendo juntos.  
+                Sé que las cosas serán difíciles, pero quiero que sepas que siempre
+                estaré a tu lado, en las buenas y en las malas 💖💖💖  
+                No nos precipitemos, porque encontraremos la manera de superar cada
+                obstáculo que se nos presente en el camino.  
+                Te quiero con todo mi corazón de poshito 💖
+                </b>
             </p>
         </div>
+
     </div>
-    </main>
-    <script src="presioname.js"></script>
+</main>
+
+<script>
+    const btn = document.querySelector(".btn-abrir");
+    const carta = document.getElementById("carta");
+
+    btn.addEventListener("click", () => {
+        if(carta.style.display === "block"){
+            carta.style.display = "none";
+        } else {
+            carta.style.display = "block";
+        }
+    });
+</script>
+
 </body>
 </html>

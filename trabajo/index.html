@@ -18,39 +18,40 @@
 
             background-image: url("https://img.freepik.com/vector-gratis/papel-pintado-simple-lindo-patron-corazon-aniversario-copulas_1017-49423.jpg?semt=ais_hybrid&w=740&q=80");
             background-repeat: repeat;
-            background-size: 250px;
+            background-size: 220px;
+            padding: 20px;
         }
 
         .stiker{
-            width: 220px;
+            width: 200px;
             max-width: 90%;
-            margin-bottom: 20px;
-        }
-
-        .palabras{
-            color: red;
-            padding: 0 20px;
+            margin-bottom: 25px;
         }
 
         .palabras h1{
-            font-size: 1.5rem;
-            margin: 10px 0;
+            color: #d6003b;
+            font-size: 1.6rem;
+            margin: 15px 0;
         }
 
         .boton{
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 250px;
             margin-top: 25px;
         }
 
         .boton a{
-            padding: 14px 28px;
-            background-color: rgba(255, 0, 0, 0.85);
-            color: black;
+            padding: 15px;
+            background-color: #ff4d6d;
+            color: white;
             text-decoration: none;
             border-radius: 30px;
             font-size: 1.1rem;
             font-weight: bold;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
@@ -59,17 +60,27 @@
         }
 
         .boton a:hover{
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
-        /* Para pantallas grandes */
-        @media (min-width: 768px){
+        /* En pantallas grandes los botones vuelven a horizontal */
+        @media (min-width: 600px){
+            .boton{
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .boton a{
+                width: auto;
+                padding: 14px 28px;
+            }
+
             .palabras h1{
                 font-size: 2rem;
             }
 
             .stiker{
-                width: 300px;
+                width: 260px;
             }
         }
     </style>

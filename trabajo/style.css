@@ -2,27 +2,34 @@ body {
     margin: 0;
     background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
     font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
+/* Contenedor centrado */
 main {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 120px;
-    height: 100vh;
-    padding-left: 120px;
+    width: 100%;
 }
+
 .presioname-container{
     position: relative;
-    width: 400px;
-    height: 200px;
+    width: 320px;
+    height: 180px;
 }
+
+/* Tapa del sobre */
 .presioname{
     width: 0;
     height: 0;
-    border-left: 200px solid transparent;
-    border-bottom: 100px solid transparent;
-    border-right: 200px solid transparent;
-    border-top: 100px solid rgb(255, 0, 0);
+    border-left: 160px solid transparent;
+    border-bottom: 90px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 90px solid rgb(255, 0, 0);
     position: absolute;
     top: 0;
     left: 0;
@@ -30,51 +37,60 @@ main {
     transition: transform 0.8s ease;
     z-index: 3;
 }
+
+/* Cuerpo del sobre */
 .contenido{
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 0;
-    border-left: 200px solid rgb(255, 121, 121);
-    border-bottom: 100px solid rgb(252, 148, 148);
-    border-right: 200px solid rgb(255, 121, 121);
-    border-top: 100px solid transparent;
+    border-left: 160px solid rgb(255, 121, 121);
+    border-bottom: 90px solid rgb(252, 148, 148);
+    border-right: 160px solid rgb(255, 121, 121);
+    border-top: 90px solid transparent;
     z-index: 2;
 }
+
+/* CARTA */
 .carta{
     position: absolute;
     top: 50%;
-    left: 100%;
-    transform: translateY(-50%) translateX(0);
-    width: 320px;
-    max-height: 380px;
+    left: 50%;
+    transform: translate(-50%, -30%) scale(0.8);
+    width: 85%;
+    max-height: 60vh;
     background-image: url(https://static.vecteezy.com/system/resources/previews/001/987/820/non_2x/valentine-s-day-background-hearts-colorful-overlapping-free-vector.jpg);
     background-size: cover;
-    padding: 25px 30px;
+    padding: 20px;
     text-align: center;
-    border-radius: 12px;
-    font-size: 15px;
+    border-radius: 15px;
+    font-size: 14px;
     opacity: 0;
     overflow-y: auto;
-    transition: transform 0.8s ease, opacity 0.8s ease;
-    z-index: 1;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: all 0.6s ease;
+    z-index: 5; /* ahora sale delante */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
+
+/* Animación al abrir */
 .presioname-container.abierto .presioname{
     transform: rotateX(180deg);
 }
+
 .presioname-container.abierto .carta{
- transform: translateY(-50%) translateX(200px);
+    transform: translate(-50%, -60%) scale(1);
     opacity: 1;
 }
+
+/* BOTÓN */
 .btn-abrir{
-     position: absolute;
-    bottom: -70px;
+    position: absolute;
+    bottom: -65px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 12px 30px;
-    font-size: 16px;
+    padding: 12px 25px;
+    font-size: 15px;
     background: #ff4d6d;
     color: white;
     border: none;
@@ -83,8 +99,17 @@ main {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, background 0.3s ease;
 }
-.btn-abrir:hover{
-        background: #ff1e4d;
-    transform: translateX(-50%) scale(1.05);
+
+.btn-abrir:active{
+    transform: translateX(-50%) scale(0.95);
 }
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 768px){
+    .presioname-container{
+        width: 400px;
+        height: 200px;
+    }
+}
+
 

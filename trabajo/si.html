@@ -1,46 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Valentín</title>
+    <title>San Valentín 💖</title>
+
     <style>
         body{
-            background-image: url(https://marketplace.canva.com/EAGLVF-wprM/2/0/900w/canva-fondo-de-pantalla-para-smartphone-corazones-pinceladas-dibujados-a-mano-9Z_JcOzzkqU.jpg);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+
+            background-image: url("https://marketplace.canva.com/EAGLVF-wprM/2/0/900w/canva-fondo-de-pantalla-para-smartphone-corazones-pinceladas-dibujados-a-mano-9Z_JcOzzkqU.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
+        }
+
+        .stiker{
+            width: 220px;
+            max-width: 90%;
+            margin-bottom: 20px;
+        }
+
+        .palabras{
+            color: red;
+            padding: 0 20px;
+        }
+
+        .palabras h1{
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .palabras h2{
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .adicional{
+            margin-top: 30px;
+        }
+
+        .adicional a{
+            text-decoration: none;
+            background-color: rgba(255, 0, 0, 0.85);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .adicional a:active{
+            transform: scale(0.95);
+        }
+
+        /* Ajuste para pantallas grandes */
+        @media (min-width: 768px){
+            .palabras h1{
+                font-size: 2rem;
+            }
+
+            .palabras h2{
+                font-size: 1.4rem;
+            }
+
+            .stiker{
+                width: 300px;
+            }
         }
     </style>
 </head>
-<div class="stiker">
-    <div class="tenor-gif-embed" data-postid="11880198396384526796" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/cuddle-cute-bubududukiwi-bubu-dudu-bubu-dudu-hug-gif-11880198396384526796">Cuddle Cute GIF</a>from <a href="https://tenor.com/search/cuddle-gifs">Cuddle GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-</div>
-<style>
-    .stiker{
-        width: 300px;
-        margin: 0 auto;
-        max-width: 80%;
-    }
-</style>
+
 <body>
-    <div class="palabras">
-    <h1>💞Sabía que dirías que si jeje💞</h1>
-    <h2>💘Feliz San Valentín💘</h2>
+
+    <div class="stiker">
+        <div class="tenor-gif-embed"
+            data-postid="11880198396384526796"
+            data-share-method="host"
+            data-aspect-ratio="1"
+            data-width="100%">
+            <a href="https://tenor.com/view/cuddle-cute-bubududukiwi-bubu-dudu-bubu-dudu-hug-gif-11880198396384526796">
+                Cuddle Cute GIF
+            </a>
+        </div>
     </div>
+
+    <div class="palabras">
+        <h1>💞 Sabía que dirías que sí jeje 💞</h1>
+        <h2>💘 Feliz San Valentín 💘</h2>
+    </div>
+
+    <div class="adicional">
+        <a href="presioname.html">💌 Presióname 💌</a>
+    </div>
+
+    <script async src="https://tenor.com/embed.js"></script>
+
 </body>
-<div class="adicional">
-<a href="presioname.html"><h3>Presioname</h3></a>
-<style>
-    .palabras{
-        text-align: center;
-        color: red;
-        margin: 20px;
-        padding: 20px 1%;
-    }
-    .adicional{
-        text-align: right;
-        text-align: center;
-        color: black;
-    }
-</style>
 </html>
