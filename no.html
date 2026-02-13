@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Segura? 😏</title>
+
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6eb;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        h1{
+            color: #d6003b;
+            margin-top: 70px;
+            padding: 0 20px;
+        }
+
+        button{
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        #si{
+            background-color: #ff4d6d;
+            color: white;
+            left: 50%;
+            top: 65%;
+            transform: translate(-50%, -50%);
+        }
+
+        #no{
+            background-color: #333;
+            color: white;
+            left: 20%;
+            top: 65%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>¿Segura que no quieres? 🥺💔</h1>
+
+    <button id="si" onclick="aceptar()">💖 SI</button>
+    <button id="no">💔 NO</button>
+
+    <script>
+        const botonNo = document.getElementById("no");
+
+        function moverBoton() {
+            const ancho = window.innerWidth - botonNo.offsetWidth;
+            const alto = window.innerHeight - botonNo.offsetHeight;
+
+            const x = Math.random() * ancho;
+            const y = Math.random() * alto;
+
+            botonNo.style.left = x + "px";
+            botonNo.style.top = y + "px";
+        }
+
+        // Evento táctil para celular
+        botonNo.addEventListener("touchstart", function(e){
+            e.preventDefault();
+            moverBoton();
+        });
+
+        // Si logran presionarlo
+        botonNo.addEventListener("click", function(e){
+            e.preventDefault();
+            moverBoton();
+        });
+
+        function aceptar(){
+            window.location.href = "si.html";
+        }
+    </script>
+
+</body>
+</html>
