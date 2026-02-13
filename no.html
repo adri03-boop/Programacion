@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Segura? 😏</title>
+
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6eb;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        h1{
+            color: #d6003b;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .contenedor{
+            position: relative;
+            width: 100%;
+            height: 200px;
+        }
+
+        button{
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            position: absolute;
+            transition: 0.3s ease;
+        }
+
+        #si{
+            background-color: #ff4d6d;
+            color: white;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #no{
+            background-color: #444;
+            color: white;
+            left: 20%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>¿Segura que no quieres? 🥺💔</h1>
+
+    <div class="contenedor">
+        <button id="si" onclick="aceptar()">💖 SI</button>
+        <button id="no">💔 NO</button>
+    </div>
+
+    <script>
+        const botonNo = document.getElementById("no");
+
+        botonNo.addEventListener("mouseover", () => {
+            const ancho = window.innerWidth - 120;
+            const alto = window.innerHeight - 100;
+
+            const x = Math.random() * ancho;
+            const y = Math.random() * alto;
+
+            botonNo.style.left = x + "px";
+            botonNo.style.top = y + "px";
+        });
+
+        function aceptar(){
+            window.location.href = "si.html";
+        }
+    </script>
+
+</body>
+</html>
